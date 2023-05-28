@@ -2,17 +2,17 @@ import React, { useState } from "react";
 import { v4 as uuid } from "uuid";
 
 
-export default function Sidebar({ display }) {
+export default function Sidebar({ display, handleClick }) {
     let content
     if (display === 0) {
         content = (
             <div className="sidebar">
                 <h1 className="sidehead">Men</h1>
                 <ul>
-                    <li>Shirts</li>
-                    <li>Jackets</li>
-                    <li>Shoes</li>
-                    <li>Suits</li>
+                    <li onClick={handleClick}>Shirts</li>
+                    <li onClick={handleClick}>Jackets</li>
+                    <li onClick={handleClick}>Shoes</li>
+                    <li onClick={handleClick}>Suits</li>
                 </ul>
             </div>
         )
@@ -23,10 +23,10 @@ export default function Sidebar({ display }) {
             <div className="sidebar">
                 <h1 className="sidehead">Women</h1>
                 <ul>
-                <li>Dresses</li>
-                <li>Blazers</li>
-                <li>Skirts</li>
-                <li>Shoes</li>
+                <li onClick={handleClick}>Dresses</li>
+                <li onClick={handleClick}>Blazers</li>
+                <li onClick={handleClick}>Skirts</li>
+                <li onClick={handleClick}>Shoes</li>
                 </ul>
             </div>
         )
