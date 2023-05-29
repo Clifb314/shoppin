@@ -7,7 +7,7 @@ export default function Cart({ cartList }) {
 
     let display = cartList.map(item => {
         return (
-            <CartItem productID={item.id} page={item.page} key={uuid()} />
+            <CartItem productID={item.productID} page={item.page} key={uuid()} />
         )
     })
 

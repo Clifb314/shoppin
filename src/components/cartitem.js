@@ -5,7 +5,7 @@ import ItemDb from "./itemDB";
 export default function CartItem({ productID, page }) {
 
 
-    const dispItem = ItemDb[page].filter(item => item.id = productID)
+    const dispItem = ItemDb[page].filter(item => item.id === productID).shift()
 
     const imgSrc = dispItem.icon
 
@@ -15,6 +15,7 @@ export default function CartItem({ productID, page }) {
     return (
         <div className="cartRow">
             <img src={imgSrc} className="cartItem" />
+            <p>{dispItem.desc}</p>
         </div>
     )
 }
