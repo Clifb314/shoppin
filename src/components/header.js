@@ -11,8 +11,10 @@ export default function Header({ handleClick, items }) {
                 <li onClick={handleClick}>Men</li>
                 <li onClick={handleClick}>Women</li>
             </ul>
-            <p><Link to="/cart">Shopping Cart</Link></p>
-            <p>{items}</p>
+            <div className="cart">
+                <p><Link to="/cart">Shopping Cart</Link></p>
+                <p>{items}</p>
+            </div>
         </div>
     )
 }

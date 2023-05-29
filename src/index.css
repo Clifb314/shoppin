@@ -1,3 +1,7 @@
+* {
+ box-sizing: border-box; 
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +14,91 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+div#root {
+  min-height: 100vh;
+}
+
+div#content {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 8fr;
+  grid-template-rows: 36px 1fr;
+}
+
+div.shop {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 30vw 30vw;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+}
+
+div.shop img {
+  object-fit: cover;
+  height: 80%;
+  width: 80%;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+div.fullCart img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+  display: inline;
+}
+
+div.cartRow {
+  display: flex;
+  margin: 12px 0;
+  padding-right: 18px;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-bottom: solid black 2px;
+}
+
+div.shop img:hover {
+  border: solid red 2px;
+}
+
+div.cart p {
+  display: inline;
+  margin: 0 6px;
+}
+
+div.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+div.header {
+  grid-column: 1 / 3;
+  padding: 0 18px;
+  background-color: rgb(201, 149, 250);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+div.header li {
+  display: inline;
+  margin: 10px;
+  cursor: pointer;
+  width: 100%;
+}
+
+div.header li:hover {
+  color: white;
+  text-decoration: underline;
 }
